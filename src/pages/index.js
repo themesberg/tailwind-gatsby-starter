@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Alert, Dropdown } from "flowbite-react";
 
 const pageStyles = {
   color: "#232129",
@@ -126,7 +127,22 @@ const links = [
 const IndexPage = () => {
   return (
     <main style={pageStyles}>
-      <h1 style={headingStyles}>
+      <Alert color="info">This is a guide using Gatsby, Flowibte, and Tailwind CSS.</Alert>
+      <Dropdown
+        label="Dropdown button"
+        dismissOnClick={false}
+      >
+        <Dropdown.Item>
+          Gatsby JS
+        </Dropdown.Item>
+        <Dropdown.Item>
+          Tailwind CSS
+        </Dropdown.Item>
+        <Dropdown.Item>
+          Flowbite Components
+        </Dropdown.Item>
+      </Dropdown>
+      <h1 className="text-blue-600">
         Congratulations
         <br />
         <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
